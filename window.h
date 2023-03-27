@@ -4,7 +4,6 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <QString>
-#include <QLabel>
 #include <QMenuBar>
 #include <QAction>
 #include <QMenu>
@@ -32,7 +31,7 @@ private:
     QWidget *widget;
     QWidget *topFiller;
     QWidget *bottomFiller;
-    QLabel *info;
     QAction *file;
     QAction *about;
+    QMessageBox *info;
 };

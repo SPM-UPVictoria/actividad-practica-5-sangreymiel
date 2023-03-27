@@ -3,8 +3,10 @@
 Window::Window(QWidget *parent)
     : window(new QMainWindow)
     , canvas(new Canvas(window)) {
-	// Definición
-	widget = new QWidget(window);
+
+	  // Definición
+	  widget = new QWidget(window);
+    info = new QMessageBox;
     topFiller = new QWidget;
     bottomFiller = new QWidget;
     layout = new QVBoxLayout;
@@ -22,11 +24,13 @@ Window::Window(QWidget *parent)
     layout->setContentsMargins(5,5,5,5);
     layout->addWidget(topFiller);
     layout->addWidget(bottomFiller);
+
     widget->setLayout(layout);
 
     createActions();
 
-    }
+    showMessage();
+}
 
 void Window::createActions() {
     QMenu* menu = window->menuBar()->addMenu("File");
@@ -38,8 +42,10 @@ void Window::createActions() {
 
 void Window::showMessage() {
     QMessageBox msgBox;
-    msgBox.setText("HEWO!");
-    msgBox.setInformativeText("Me cago en dios");
+    msgBox.setIcon(QMessageBox::Warning);
+    msgBox.setText("Info!");
+    msgBox.setInformativeText("Los archivos se abren desde el menu File->Open");
+    msgBox.setFixedSize(200,100);
     int ret = msgBox.exec();
 }
 
