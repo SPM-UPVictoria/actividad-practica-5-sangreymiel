@@ -18,21 +18,21 @@ class Window : public QObject{
 public:
     Window(QWidget *parent = nullptr);
     void show();
-	void openFile();
-	void loadFile(const QString &fileName);
-	void showMessage();
-	QString selectFile();
+    void openFile();
+    void loadFile(const QString &fileName);
+    void showMessage();
+    QString selectFile();
 private:
-	void createActions();
+    void createActions();
 
     QMainWindow *window;
-	QMenuBar *menuBar;
+    QMenuBar *menuBar;
     Canvas *canvas;
-	QVBoxLayout *layout;
-	QWidget *widget;
-	QWidget *topFiller;
-	QWidget *bottomFiller;
-	QLabel *info;
-	QAction *file;
-	QAction *about;
+    QVBoxLayout *layout;
+    QWidget *widget;
+    QWidget *topFiller;
+    QWidget *bottomFiller;
+    QLabel *info;
+    QAction *file;
+    QAction *about;
 };

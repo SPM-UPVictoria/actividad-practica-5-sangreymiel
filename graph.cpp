@@ -19,13 +19,3 @@ graph loadGraph(std::string &path) {
 	}
 	return g;
 }
-
-void printGraph(graph g) {
-	for (int i = 0; i < g.size(); i++) {
-		std::cout << i << ": ";
-		for (auto j : g[i]) {
-			std::cout << j << " ";
-		}
-		std::cout << std::endl;
-	}
-}

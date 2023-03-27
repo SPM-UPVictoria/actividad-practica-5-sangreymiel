@@ -8,4 +8,3 @@
 typedef std::vector<std::vector<int>> graph;
 
 graph loadGraph(std::string &path);
-void printGraph(graph g);
